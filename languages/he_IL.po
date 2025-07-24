@@ -1,0 +1,107 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-02-13 12:02GMT 2\n"
+"PO-Revision-Date: 2020-03-18 12:10+0200\n"
+"Last-Translator: \n"
+"Language-Team: Wemake\n"
+"Language: he_IL\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Eazy Po 0.9.5.3\n"
+": \n"
+
+# ---------------------------------------------------------------
+
+# /inc/admin.php
+msgid "Please fill the Google Tag Manager container ID in the field below."
+msgstr "אנא מלא את מזהה הנכס של גוגל טג מנג'ר בשדה למטה."
+
+# ---------------------------------------------------------------
+
+# /inc/admin.php
+msgid "Please fill the Google analytics Tracking ID in the field below."
+msgstr "אנא מלא את מזהה מעקב של גוגל אנליטקס בשדה למטה."
+
+# ---------------------------------------------------------------
+
+# /inc/admin.php
+msgid "Please fill the global site tag in the field below."
+msgstr "אנא מלא את מזהה תג המעקב ברמת האתר בשדה למטה."
+
+# ---------------------------------------------------------------
+
+# /inc/admin.php
+msgid "Please fill the Facebook Pixel ID in the field below."
+msgstr "אנא מלא את מזהה פיקסל בשדה למטה."
+
+# ---------------------------------------------------------------
+
+# /inc/admin.php
+msgid "Enabled"
+msgstr "מופעל"
+
+# /inc/admin.php
+msgid "Disabled"
+msgstr "כבוי"
+
+# /inc/admin.php
+msgid "Update"
+msgstr "עדכן"
+
+# /inc/admin.php
+msgid "Update and activate"
+msgstr "עדכן והפעל"
+
+# ---------------------------------------------------------------
+
+# /inc/admin.php
+msgid "You have unsaved changes"
+msgstr "יש לך שינויים שלא נשמרו"
+
+# /inc/admin.php
+msgid "Request error!"
+msgstr "שגיאה!"
+
+# /inc/admin.php
+msgid "Settings successfully changed"
+msgstr "ההגדרות השתנו בהצלחה"
+
+# /inc/admin.php
+msgid "Error. Please try again later."
+msgstr "שגיאה. בבקשה נסה שוב מאוחר יותר."
+
+# /inc/admin.php
+msgid "Settings"
+msgstr "הגדרות"
+
+# ---------------------------------------------------------------
+
+# /inc/admin_update.php
+msgid "There is a new version of %s available."
+msgstr "קיימת גרסא חדשה של התוסף %s."
+
+# /inc/admin_update.php
+msgid "update now"
+msgstr "עדכן עכשיו"
+
+# /inc/admin_update.php
+msgid "Updating..."
+msgstr "מעדכן..."
+
+# /inc/admin_update.php
+msgid "Updated!"
+msgstr "מעודכן!"
+
+# ---------------------------------------------------------------
+
+# /inc/frontend.php
+msgid "Briefly unavailable for scheduled maintenance. Check back in a minute."
+msgstr "מתבצעות עבודות תחזוקה, נסה מאוחר יותר."

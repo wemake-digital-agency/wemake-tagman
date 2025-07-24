@@ -1,0 +1,267 @@
+@import mixins
+@import flex
+
+.wmtm-form
+  margin: 30px 20px 0
+  max-width: 900px
+  &,*
+    outline: none
+    &,&:before,&:after
+      box-sizing: border-box
+  &.wmtm-loading
+    position: relative
+    &:before
+      content: ""
+      display: block
+      position: absolute
+      z-index: 1
+      top: 0
+      bottom: 0
+      right: 0
+      left: 0
+    .wmtm-form-submit
+      padding-left: 15px
+      background: #7d7d7d
+      direction: ltr
+      &:before
+        content: ""
+        display: block
+        border: 1px solid #909090
+        border-left: 1px solid #ffffff
+        border-radius: 50%
+        min-width: 16px
+        max-width: 16px
+        height: 16px
+        margin-right: 10px
+        position: relative
+        top: 2px
+        +transform(translateZ(0)) 
+        +animation(wmtm-spiner-animation 1.1s infinite linear)
+    .wmtm-form-field input:not([type="submit"]):not([type="checkbox"])
+      background-color: #f5f5f5
+  .wmtm-result
+    padding: 10px
+    border: 1px solid #00adff
+    color: #00adff
+    margin-bottom: 30px
+    font-size: 16px
+    display: none
+    &.wmtm-show
+      display: block
+    &.wmtm-error
+      border: 1px solid #ff0000
+      color: #ff0000
+  .wmtm-form-field
+    position: relative
+    max-width: 400px
+    &:not(.last)
+      margin-bottom: 30px
+    &.last
+      +flex
+      button
+        margin-left: 10px
+    &.wmtm-error
+      .wmtm-form-label
+        color: #ff0000
+      input:not([type="submit"]):not([type="checkbox"])
+        border-color: #ff0000
+    input:not([type="submit"]):not([type="checkbox"])
+      width: 100%
+      height: 34px
+      box-shadow: none
+      +border-radius(4px)
+      +placeholder-color(#bbb)
+  .wmtm-checkbox .wmtm-form-label
+    margin-bottom: 6px
+  .wmtm-switcher
+    display: inline-block
+    -moz-user-select: none
+    -khtml-user-select: none
+    user-select: none
+    &.checked
+      .wmtm-form-label
+        color: #009eef
+        border-color: #009eef
+        padding-left: 15px
+        padding-right: 40px
+      &:before
+        background-color: #009eef
+        left: 100%
+        margin-left: -29px
+    &:before
+      content: ""
+      display: block
+      position: absolute
+      top: 3px
+      left: 3px
+      width: 26px
+      height: 26px
+      background-color: #e6e6e6
+      +transition(0.1s)
+      +border-radius(2px)
+    .wmtm-form-label
+      z-index: 1
+      display: inline-block
+      height: 32px
+      padding: 5px 15px 5px 40px
+      margin: 0
+      color: #686868
+      border: 1px solid #e6e6e6
+      cursor: pointer
+      +border-radius(4px)
+    input[type="checkbox"]
+      display: none
+  .wmtm-form-label
+    position: relative
+    font-size: 16px
+    margin-bottom: 10px
+    padding-right: 35px
+    display: inline-block
+  .wmtm-form-info
+    margin-bottom: 10px
+    font-size: 13px
+  .wmtm-form-tooltip
+    cursor: auto
+    &:not(:hover) .wmtm-form-tooltip-c
+      visibility: hidden
+      +translate-y(-10px)
+      +opacity(0,0)
+    &:hover .wmtm-form-tooltip-q
+      background-color: darken(#d6f2ff, 5%)
+      color: darken(#009eef, 5%)
+  .wmtm-form-tooltip-c,.wmtm-form-tooltip-q
+    +transition(0.1s)
+  .wmtm-form-tooltip-c
+    position: absolute
+    top: 100%
+    left: 100%
+    margin: 15px 0 0 -30px
+    background-color: #fff
+    width: 350px
+    padding: 20px
+    +border-radius(4px)
+    +box-shadow(1px 1px 10px rgba(0,0,0,0.3))
+    &:before
+      content: ""
+      display: block
+      position: absolute
+      bottom: 100%
+      left: 14px
+      border: 5px solid transparent
+      border-bottom: 5px solid #fff
+    p
+      &:first-child
+        margin-top: 0
+      &:last-child
+        margin-bottom: 0
+    img
+      max-width: 100%
+  .wmtm-form-tooltip-q
+    position: absolute
+    top: -2px
+    right: 0
+    width: 22px
+    height: 22px
+    text-align: center
+    background-color: #d6f2ff
+    font-weight: 600
+    font-size: 13px
+    color: #009eef
+    line-height: 20px
+    +border-radius(50%)
+  .wmtm-form-submit
+    cursor: pointer
+    min-width: 140px
+    height: 34px
+    line-height: 14px
+    padding: 0 20px 3px
+    border: none
+    background: #0caaf7
+    color: #fff
+    font-size: 15px
+    +box-shadow(none)
+    +transition-custom(background-color 0.3s linear)
+    +border-radius(4px)
+    @extend .flex-center
+    &:hover
+      background: darken(#0caaf7, 10%)
+    &.disabled
+      background-color: #ccc
+  .wmtm-settings-tabs
+    margin-bottom: 20px
+    .wmtm-settings-tabs-head
+      border-bottom: 1px solid #f1f1f1
+      +flex()
+      +flex-justify-content(start,flex-start)
+      +flex-align-items(stretch)
+      .wmtm-settings-tabs-item
+        background-color: #ececec
+        padding: 15px 20px
+        color: #585858
+        text-decoration: none
+        font-size: 16px
+        border-right: 1px solid #e2e2e2
+        +box-shadow(none)
+        +transition(0.3s)
+        &:hover
+          background-color: #f9f9f9
+        &.active
+          background-color: #fff
+          color: #0098e2
+    .wmtm-settings-tabs-content
+      display: none
+      background: #fff
+      padding: 35px 20px
+  .wmtm-form-bottom
+    +flex()
+    +flex-justify-content(space-between, space-between)
+  .wmtm-poweredby
+    color: #a2a2a2
+    .blue,a:hover
+      color: #2b8aff
+    a
+      text-decoration: none
+      font-weight: 600
+      color: #767772
+      +transition(0.3s)
+
+body.wp-admin .plugins #wemake-tag-manager-update
+  .notice > p
+    display: none
+    &.update-text
+      display: block
+  &.updated .notice
+    >p
+      display: none
+      &.update-success-text
+        display: block
+  &.updating-message .notice
+    >p
+      display: none
+      &.update-active-text
+        display: block
+
+@keyframes wmtm-spiner-animation
+  0%
+    +rotate(0deg)
+  100%
+    +rotate(360deg)
+
+html[lang="he-IL"]
+  .wmtm-form
+    .wmtm-form-field
+      &:not(.wmtm-checkbox) .wmtm-form-label
+        padding: 0 0 0 35px
+      &.last button
+        margin-left: 0
+        margin-right: 10px
+    .wmtm-form-tooltip-q
+      left: 0
+      right: auto
+    .wmtm-form-tooltip-c
+      left: auto
+      right: 100%
+      margin-right: -30px
+      &:before
+        left: auto
+        right: 14px
