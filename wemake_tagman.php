@@ -3,7 +3,7 @@
 /*
 Plugin Name: Wemake Tag Manager
 Plugin URI: http://wemake.co.il
-Version: 1.34.1
+Version: 1.34.4
 Author: Wemake Team
 Author URI: http://wemake.co.il
 License: GPL2
@@ -27,12 +27,12 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 
 // Constants
 
-define('WMTM_PLUGIN_NAME', 'Wemake Tag Manager');
-define('WMTM_PLUGIN_SLUG', 'wemake-tagman');
-define('WMTM_PLUGIN_VERSION', '1.34');
-define('WMTM_ABSPATH', dirname( __FILE__ ));
-define('WMTM_URI', plugins_url().'/'.WMTM_PLUGIN_SLUG);
-define('WMTM_AJAX_DEBUG', true);
+define("WMTM_PLUGIN_NAME", 'Wemake Tag Manager');
+define("WMTM_PLUGIN_SLUG", 'wemake-tagman');
+define("WMTM_PLUGIN_VERSION", '1.34.4');
+define("WMTM_ABSPATH", dirname( __FILE__ ));
+define("WMTM_URI", plugins_url().'/'.WMTM_PLUGIN_SLUG);
+define("WMTM_AJAX_DEBUG", true);
 
 define('WMTM_DOC_ROOT', preg_replace('/\/$/', '', ABSPATH));
 define('WMTM_HTTPS_ON', (isset($_SERVER['HTTPS']) && !empty($_SERVER['HTTPS']) ? true : false));
