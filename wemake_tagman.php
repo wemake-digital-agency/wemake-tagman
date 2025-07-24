@@ -27,12 +27,12 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 
 // Constants
 
-define('WMTM_PLUGIN_NAME', 'Wemake Tag Manager');
-define('WMTM_PLUGIN_SLUG', 'wemake-tagman');
-define('WMTM_PLUGIN_VERSION', '1.34');
-define('WMTM_ABSPATH', dirname( __FILE__ ));
-define('WMTM_URI', plugins_url().'/'.WMTM_PLUGIN_SLUG);
-define('WMTM_AJAX_DEBUG', true);
+define("WMTM_PLUGIN_NAME", 'Wemake Tag Manager');
+define("WMTM_PLUGIN_SLUG", 'wemake-tagman');
+define("WMTM_PLUGIN_VERSION", '1.34');
+define("WMTM_ABSPATH", dirname( __FILE__ ));
+define("WMTM_URI", plugins_url().'/'.WMTM_PLUGIN_SLUG);
+define("WMTM_AJAX_DEBUG", true);
 
 define('WMTM_DOC_ROOT', preg_replace('/\/$/', '', ABSPATH));
 define('WMTM_HTTPS_ON', (isset($_SERVER['HTTPS']) && !empty($_SERVER['HTTPS']) ? true : false));
