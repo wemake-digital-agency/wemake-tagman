@@ -33,8 +33,8 @@ if (!class_exists('Wemake_Tagman_GitHub_Updater')) {
                 'timeout' => 15,
             ]);
 
-            error_log('tagman', 0);
-            error_log(print_r($response, true));
+            // error_log('tagman', 0);
+            // error_log(print_r($response, true));
 
             if (is_wp_error($response)) {
                 return $transient;
