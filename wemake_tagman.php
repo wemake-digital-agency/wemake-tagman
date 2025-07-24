@@ -3,7 +3,7 @@
 /*
 Plugin Name: Wemake Tag Manager
 Plugin URI: http://wemake.co.il
-Version: 1.34
+Version: 1.34.1
 Author: Wemake Team
 Author URI: http://wemake.co.il
 License: GPL2
