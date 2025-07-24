@@ -211,5 +211,6 @@ add_action('admin_footer', function(){
 // Update
 
 //require_once(WMTM_ABSPATH . '/inc/admin_update.php');
+require_once(WMTM_ABSPATH . '/inc/admin_update_plugin_github.php');
 
 ?>
