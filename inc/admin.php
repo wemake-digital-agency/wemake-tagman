@@ -202,15 +202,10 @@ add_action('admin_footer', function(){
     ?>
     <script>
         jQuery(function($){
-            $("[data-slug='wemake-tag-manager'] .plugin-version-author-uri").append(" | <a href=\'<?php echo get_admin_url() . 'options-general.php?page=wm-tag-manager'; ?>\'><?php _e('Settings', WMTM_PLUGIN_SLUG) ?></a>");
+            $("[data-slug='wemake-tagman'] .plugin-version-author-uri").append(" | <a href=\'<?php echo esc_url(admin_url('admin.php?page=wm-tag-manager')); ?>\'><?php _e('Settings', WMTM_PLUGIN_SLUG) ?></a>");
         });
     </script>
     <?php
 });
-
-// Update
-
-//require_once(WMTM_ABSPATH . '/inc/admin_update.php');
-require_once(WMTM_ABSPATH . '/inc/admin_update_plugin_github.php');
 
 ?>

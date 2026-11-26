@@ -1,9 +1,5 @@
 <?php
 
-if(defined(WMTM_AJAX_DEBUG) && !empty(WMTM_AJAX_DEBUG)){
-    ini_set('display_errors', 1);
-    error_reporting(E_ALL);
-}
 
 //function wmtm_plugin_check_update_action(){
 //

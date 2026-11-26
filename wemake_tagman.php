@@ -3,10 +3,11 @@
 /*
 Plugin Name: Wemake Tag Manager
 Plugin URI: http://wemake.co.il
-Version: 1.35
+Version: 1.36
 Author: Wemake Team
 Author URI: http://wemake.co.il
 License: GPL2
+Update URI: https://repository.wemake.co.il/wemake-tagman
 */
 /*
 Copyright 2017  Wemake Team  (email : alex@wemake.co.il)
@@ -29,10 +30,9 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 
 define("WMTM_PLUGIN_NAME", 'Wemake Tag Manager');
 define("WMTM_PLUGIN_SLUG", 'wemake-tagman');
-define("WMTM_PLUGIN_VERSION", '1.35');
+define("WMTM_PLUGIN_VERSION", '1.36');
 define("WMTM_ABSPATH", dirname( __FILE__ ));
 define("WMTM_URI", plugins_url().'/'.WMTM_PLUGIN_SLUG);
-define("WMTM_AJAX_DEBUG", true);
 
 define('WMTM_DOC_ROOT', preg_replace('/\/$/', '', ABSPATH));
 define('WMTM_HTTPS_ON', (isset($_SERVER['HTTPS']) && !empty($_SERVER['HTTPS']) ? true : false));
@@ -51,6 +51,11 @@ if(version_compare(phpversion(), '5.6.40', '<')){
 // Functions
 
 require_once(WMTM_ABSPATH . '/inc/functions.php');
+
+// Updates through the Wemake update server (repository.wemake.co.il)
+
+require_once(WMTM_ABSPATH . '/inc/class-wemake-update-client.php');
+new Wemake_Update_Client_1_0(__FILE__, WMTM_PLUGIN_SLUG, WMTM_PLUGIN_VERSION);
 
 // AJAX actions
 

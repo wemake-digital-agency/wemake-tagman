@@ -2,14 +2,6 @@
 
 if(!defined( 'WMTM_ABSPATH')) exit;
 
-// Maintenance mode
-
-add_action('template_redirect', function(){
-    if(wmtm_get_maintenance_status()){
-        die('<h1 align="center">'.__('Briefly unavailable for scheduled maintenance. Check back in a minute.', WMTM_PLUGIN_SLUG).'</h1>');
-    }
-});
-
 if(!empty(get_option('wmtm_l'))){
     return false;
 }

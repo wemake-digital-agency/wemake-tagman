@@ -1,6 +1,6 @@
 jQuery(function($){
 
-    if(typeof(wmtm_update_param)==="undefined"){
+    if(!$(".wmtm-form").length){
         return false;
     }
 
@@ -244,56 +244,6 @@ jQuery(function($){
     });
 
     $(".wmtm-switcher input[type='checkbox']").trigger("change").addClass("ready");
-
-    // Check plugin update
-
-    if(typeof(wmtm_update_param)!=="undefined" && !wmtm_update_param.checked){
-        $.ajax({
-            url: wmtm_update_param.action_check,
-            context: document.body
-        });
-    }
-
-    // Run plugin update
-
-    $.fn.showUpdateError = function(){
-
-        var $this = $(this),
-
-        $update_message = $this.find(".update-message");
-        $update_message.attr("class", "update-message notice inline notice-warning notice-alt notice-error")
-            .html("<p class='notice-text update-text'>" + wmtm_language.update_error + "</p>");
-
-        $this.removeClass("updating-message");
-
-    };
-
-    $(document).on("click", ".wmtm-update-link", function(){
-
-        var $plugin_update_row = $(this).parents(".plugin-update-tr"),
-            $notice = $plugin_update_row.find(".notice");
-
-        $plugin_update_row.addClass("updating-message");
-
-        $.ajax({
-            type: "POST",
-            dataType: "json",
-            url: wmtm_update_param.action_run,
-            context: document.body
-        }).done(function(data){
-            if(typeof(data)!=="undefined" && typeof(data.error)!=="undefined" && data.error===0) {
-                $plugin_update_row.removeClass("updating-message").addClass("updated");
-                $notice.removeClass("notice-warning").addClass("updated-message notice-success");
-            }else{
-                $plugin_update_row.showUpdateError();
-            }
-        }).fail(function(){
-            $plugin_update_row.showUpdateError();
-        });
-
-        return false;
-
-    });
 
     // Functions
 
